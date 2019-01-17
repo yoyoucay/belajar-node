@@ -7,8 +7,17 @@
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-item>
+    <ion-label color="primary" floating>Nama</ion-label>
+    <ion-input[(ngModel)]="data.nama"></ion-input>
+  </ion-item>
+
+  <ion-item>
+      <ion-label color="primary" floating>Pendapat</ion-label>
+      <ion-textarea placeholder="Pendapat anda.." [(ngModel)]="data.pendapat"></ion-textarea>
+  </ion-item>
+
+  <button ion-button full (click)="sumbit()"> Submit </button>
 </ion-content>
+
+
