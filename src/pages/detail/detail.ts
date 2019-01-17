@@ -14,11 +14,12 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
   templateUrl: 'detail.html',
 })
 export class DetailPage {
+  item: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.data = this.navParams.data;
+    this.item = this.navParams.data;
     // Received data
-    console.log(this.data);
+    console.log(this.item);
   }
 
   ionViewDidLoad() {

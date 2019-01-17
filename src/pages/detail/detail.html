@@ -7,14 +7,26 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>detail</ion-title>
+    <ion-title>Detail</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <p>Nama : {{data.nama}}</p>
-  <p>Pendapat : {{data.pendapat}}</p>
+      <ion-card>
+        <ion-item>
+          <ion-avatar item-start>
+            <img src="{{item.avatar}}">
+          </ion-avatar>
+          <h2>{{item.first_name}} {{item.last_name}}</h2>
+        </ion-item>
+        <ion-card-content>
+          <p>Birtdate : {{item.birthdate}}</p>
+          <p>Email : {{item.email}}</p>
+          <p>Gender : {{item.gender}}</p>
+          <p>IP Address : {{item.ip_address}}</p>
+        </ion-card-content>
+      </ion-card>
     <button ion-button full (click)="kembali()"> Back to Home </button>
 </ion-content>

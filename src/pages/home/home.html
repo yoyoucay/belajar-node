@@ -1,23 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Home
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <ion-item>
-    <ion-label color="primary" floating>Nama</ion-label>
-    <ion-input [(ngModel)]="data.nama"></ion-input>
-  </ion-item>
-
-  <ion-item>
-      <ion-label color="primary" floating>Pendapat</ion-label>
-      <ion-textarea placeholder="Pendapat anda.." [(ngModel)]="data.pendapat"></ion-textarea>
-  </ion-item>
-
-  <button ion-button full (click)="submit()"> Submit </button>
+  <ion-card *ngFor="let item of data" (click)="detailData(item)">
+    <ion-item>
+      <ion-avatar item-start>
+        <img src="{{item.avatar}}">
+      </ion-avatar>
+      <h2>{{item.first_name}} {{item.last_name}}</h2>
+    </ion-item>
+    <ion-card-content>
+      <p>Birtdate : {{item.birthdate}}</p>
+      <p>Email : {{item.email}}</p>
+      <p>Gender : {{item.gender}}</p>
+      <p>IP Address : {{item.ip_address}}</p>
+    </ion-card-content>
+  </ion-card>
 </ion-content>
 
 
