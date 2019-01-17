@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { DetailPage } from '../detail/detail';
-import sumberData from "../../data/data-1";
+import sumberData from "../../data/data-2";
 
 @Component({
   selector: 'page-home',

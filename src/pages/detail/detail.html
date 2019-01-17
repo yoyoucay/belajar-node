@@ -14,19 +14,43 @@
 
 
 <ion-content padding>
-      <ion-card>
+    <ion-card>
+
         <ion-item>
           <ion-avatar item-start>
-            <img src="{{item.avatar}}">
+            <img src={{item.avatar}}>
           </ion-avatar>
-          <h2>{{item.first_name}} {{item.last_name}}</h2>
+          <h2>{{item.fullName}}</h2>
+          <p>November 5, 1955</p>
         </ion-item>
+      
+        <img src="https://www.ubackground.com/_ph/11/650000520.jpg">
+      
         <ion-card-content>
-          <p>Birtdate : {{item.birthdate}}</p>
-          <p>Email : {{item.email}}</p>
-          <p>Gender : {{item.gender}}</p>
-          <p>IP Address : {{item.ip_address}}</p>
+          <p>"{{item.slogan}}"</p>
         </ion-card-content>
+      
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="thumbs-up"></ion-icon>
+              <div>12 Likes</div>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-start clear small>
+              <ion-icon name="text"></ion-icon>
+              <div>4 Comments</div>
+            </button>
+          </ion-col>
+          <ion-col center text-center>
+            <ion-note>
+              11h ago
+            </ion-note>
+          </ion-col>
+        </ion-row>
+      
       </ion-card>
+      
     <button ion-button full (click)="kembali()"> Back to Home </button>
 </ion-content>
