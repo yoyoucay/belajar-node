@@ -9,7 +9,7 @@
 <ion-content padding>
   <ion-item>
     <ion-label color="primary" floating>Nama</ion-label>
-    <ion-input[(ngModel)]="data.nama"></ion-input>
+    <ion-input [(ngModel)]="data.nama"></ion-input>
   </ion-item>
 
   <ion-item>
@@ -17,7 +17,7 @@
       <ion-textarea placeholder="Pendapat anda.." [(ngModel)]="data.pendapat"></ion-textarea>
   </ion-item>
 
-  <button ion-button full (click)="sumbit()"> Submit </button>
+  <button ion-button full (click)="submit()"> Submit </button>
 </ion-content>
 
 
